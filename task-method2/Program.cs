@@ -9,6 +9,7 @@ Clear();
 
 string[] array = { "Hello", "2", "world", ":-)" };
 string[] newArray = GetArrayWithShorterStringLength(array);
+WriteLine($"[{String.Join(", ", newArray)}]");
 
 string[] GetArrayWithShorterStringLength(string[] array)
 {
