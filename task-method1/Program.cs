@@ -9,6 +9,7 @@ Clear();
 
 string[] array = { "Hello", "2", "world", ":-)" };
 string[] newArray = GetArrayWithShorterStringLength(array);
+PrintArray(newArray);
 
 string[] GetArrayWithShorterStringLength(string[] array)
 {
@@ -32,3 +33,20 @@ string[] GetArrayWithShorterStringLength(string[] array)
   }
   return newArray;
 }
+
+void PrintArray(string[] newArray)
+{
+  Write("[");
+  for (int i = 0; i < newArray.Length; i++)
+  {
+    if (i != newArray.Length - 1)
+    {
+      Write($"{newArray[i]}, ");
+    }
+    else
+    {
+      Write($"{newArray[i]}");
+    }
+  }
+  Write("]");
+};
