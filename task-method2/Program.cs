@@ -8,3 +8,19 @@ Clear();
 // [“Russia”, “Denmark”, “Kazan”] → []
 
 string[] array = { "Hello", "2", "world", ":-)" };
+string[] newArray = GetArrayWithShorterStringLength(array);
+
+string[] GetArrayWithShorterStringLength(string[] array)
+{
+  string strElem = "";
+  foreach (string item in array)
+  {
+    if (item.Length <= 3)
+    {
+      strElem += item + " ";
+    }
+  }
+  string[] newArray = strElem.Split(" ", StringSplitOptions.RemoveEmptyEntries).ToArray();
+  return newArray;
+}
+
