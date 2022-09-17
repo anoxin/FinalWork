@@ -8,3 +8,27 @@ Clear();
 // [“Russia”, “Denmark”, “Kazan”] → []
 
 string[] array = { "Hello", "2", "world", ":-)" };
+string[] newArray = GetArrayWithShorterStringLength(array);
+
+string[] GetArrayWithShorterStringLength(string[] array)
+{
+  int length = 0;
+  foreach (string item in array)
+  {
+    if (item.Length <= 3)
+    {
+      length++;
+    }
+  }
+  string[] newArray = new string[length];
+  int index = 0;
+  foreach (string item in array)
+  {
+    if (item.Length <= 3)
+    {
+      newArray[index] = item;
+      index++;
+    }
+  }
+  return newArray;
+}
